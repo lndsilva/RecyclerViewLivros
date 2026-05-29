@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,6 +29,21 @@ public class MainActivity extends AppCompatActivity {
         });
 
         idRecLivros = findViewById(R.id.idRecLivros);
+
+        lstLivros = new ArrayList<>();
+
+        lstLivros.add(new Livros("Academia","Educação",R.drawable.academia,22.50));
+        lstLivros.add(new Livros("Caso perdido","Romance",R.drawable.caso_perdido,1.99));
+        lstLivros.add(new Livros("Fazer Amigos","Motivação",R.drawable.fazer_amigos,20.80));
+        lstLivros.add(new Livros("Murdoku","Artesanato",R.drawable.murdoku,22.50));
+        lstLivros.add(new Livros("Academia","Educação",R.drawable.caminho,22.50));
+        lstLivros.add(new Livros("Academia","Educação",R.drawable.academia,22.50));
+        lstLivros.add(new Livros("Academia","Educação",R.drawable.academia,22.50));
+        lstLivros.add(new Livros("Academia","Educação",R.drawable.academia,22.50));
+        lstLivros.add(new Livros("Academia","Educação",R.drawable.academia,22.50));
+        lstLivros.add(new Livros("Academia","Educação",R.drawable.academia,22.50));
+        lstLivros.add(new Livros("Academia","Educação",R.drawable.academia,22.50));
+
 
         AdapterLivros adapterLivros = new AdapterLivros(getApplicationContext(), lstLivros);
 
