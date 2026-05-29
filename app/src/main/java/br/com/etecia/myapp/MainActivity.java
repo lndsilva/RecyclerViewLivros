@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -29,6 +30,12 @@ public class MainActivity extends AppCompatActivity {
         idRecLivros = findViewById(R.id.idRecLivros);
 
         AdapterLivros adapterLivros = new AdapterLivros(getApplicationContext(), lstLivros);
+
+        idRecLivros.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
+
+        idRecLivros.setAdapter(adapterLivros);
+
+
 
 
 
